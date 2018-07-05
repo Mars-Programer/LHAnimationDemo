@@ -37,15 +37,7 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self commonInit];
-
-}
-
-
-- (void)commonInit{
-    
     [self updatLayout];
-    
 }
 
 - (void)setProgress:(CGFloat)progress
@@ -65,7 +57,6 @@
     self.totalHotTextLabel.clipsToBounds = YES;
     self.gradientColorView.layer.cornerRadius = 9;
     self.gradientColorView.clipsToBounds = YES;
-    
     
     [self updateConstraints];
     [self.progressView layoutIfNeeded];

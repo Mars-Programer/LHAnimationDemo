@@ -45,17 +45,6 @@ static const CGFloat layerWidth = 5;
     [self commonInit];
 }
 
-//- (CAShapeLayer *)topLayer {
-//    if (!_topLayer) {
-//        _topLayer = [CAShapeLayer layer];
-//        _topLayer.lineWidth = layerWidth;
-//        _topLayer.lineCap = kCALineCapRound;
-//        _topLayer.fillColor = [UIColor clearColor].CGColor;
-//        _topLayer.strokeColor = [UIColor whiteColor].CGColor;
-//    }
-//    return _topLayer;
-//}
-
 - (CAShapeLayer *)bottomLayer {
     if (!_bottomLayer) {
         _bottomLayer = [CAShapeLayer layer];
@@ -134,8 +123,6 @@ static const CGFloat layerWidth = 5;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = 2;
-//    animation.fromValue = @(_progress);
-//    animation.toValue = @(progress);
     self.topLayer.strokeEnd = progress;
 
     [self.topLayer addAnimation:animation forKey:@"animationStrokeEnd"];
