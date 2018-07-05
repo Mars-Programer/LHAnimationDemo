@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XSUserOverviewDataView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qa0-Mw-f1d" customClass="XSUserCircleProgress">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuj-B7-Kyi">
+                            <rect key="frame" x="28" y="82" width="44" height="16"/>
+                            <color key="backgroundColor" red="0.99607843139999996" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WechatIMG6560.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Doh-2F-aN7">
+                            <rect key="frame" x="25" y="25" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Doh-2F-aN7" secondAttribute="height" multiplier="1:1" id="K1E-gA-bm4"/>
+                                <constraint firstAttribute="width" constant="50" id="ZJA-jb-g0b"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心动勋章" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-jm-HrH">
+                            <rect key="frame" x="28" y="82" width="44" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="4gk-az-XIy"/>
+                                <constraint firstAttribute="width" constant="44" id="i7j-gQ-7Z1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kdS-jm-HrH" firstAttribute="top" secondItem="tuj-B7-Kyi" secondAttribute="top" id="1rE-pq-ZLg"/>
+                        <constraint firstItem="Doh-2F-aN7" firstAttribute="centerX" secondItem="Qa0-Mw-f1d" secondAttribute="centerX" id="9YM-kA-DXz"/>
+                        <constraint firstItem="kdS-jm-HrH" firstAttribute="leading" secondItem="tuj-B7-Kyi" secondAttribute="leading" id="MoN-KR-ydx"/>
+                        <constraint firstItem="Doh-2F-aN7" firstAttribute="centerY" secondItem="Qa0-Mw-f1d" secondAttribute="centerY" id="P0K-8f-IHv"/>
+                        <constraint firstItem="kdS-jm-HrH" firstAttribute="bottom" secondItem="tuj-B7-Kyi" secondAttribute="bottom" id="P8c-gY-HXw"/>
+                        <constraint firstItem="kdS-jm-HrH" firstAttribute="centerX" secondItem="Doh-2F-aN7" secondAttribute="centerX" id="m2p-2h-vWw"/>
+                        <constraint firstItem="kdS-jm-HrH" firstAttribute="trailing" secondItem="tuj-B7-Kyi" secondAttribute="trailing" id="mpx-85-Oyd"/>
+                        <constraint firstAttribute="bottom" secondItem="kdS-jm-HrH" secondAttribute="bottom" constant="2" id="xE5-hz-CBc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Qa0-Mw-f1d" secondAttribute="bottom" id="2AQ-eR-sAk"/>
+                <constraint firstItem="Qa0-Mw-f1d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4rd-tk-red"/>
+                <constraint firstItem="Qa0-Mw-f1d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7T2-NE-6DI"/>
+                <constraint firstAttribute="trailing" secondItem="Qa0-Mw-f1d" secondAttribute="trailing" id="niL-Yr-Jzs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gradientColorView" destination="tuj-B7-Kyi" id="S00-Ii-48h"/>
+                <outlet property="progressView" destination="Qa0-Mw-f1d" id="ZKa-yf-IBR"/>
+                <outlet property="showMedalIcon" destination="Doh-2F-aN7" id="XaW-af-XGb"/>
+                <outlet property="totalHotTextLabel" destination="kdS-jm-HrH" id="RTj-5s-OE3"/>
+            </connections>
+            <point key="canvasLocation" x="69.5" y="81"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WechatIMG6560.jpeg" width="2018" height="2048"/>
+    </resources>
+</document>

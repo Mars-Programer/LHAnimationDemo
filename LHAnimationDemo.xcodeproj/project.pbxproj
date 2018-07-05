@@ -19,6 +19,10 @@
 		E4B0E1F720BFDF22006CE075 /* CALayer+LHRotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B0E1F620BFDF22006CE075 /* CALayer+LHRotationAnimation.m */; };
 		E4B0E1F920BFE0FD006CE075 /* WechatIMG6560.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E4B0E1F820BFE0FD006CE075 /* WechatIMG6560.jpeg */; };
 		E4B0E1FB20BFE9C1006CE075 /* WechatIMG29.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E4B0E1FA20BFE9C1006CE075 /* WechatIMG29.jpeg */; };
+		E4FE8F1720EE147D004F1D47 /* UIView+GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FE8F1120EE147D004F1D47 /* UIView+GradientLayer.m */; };
+		E4FE8F1820EE147D004F1D47 /* XSUserOverviewDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FE8F1220EE147D004F1D47 /* XSUserOverviewDataView.m */; };
+		E4FE8F1920EE147D004F1D47 /* XSUserCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FE8F1320EE147D004F1D47 /* XSUserCircleProgress.m */; };
+		E4FE8F1A20EE147D004F1D47 /* XSUserOverviewDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4FE8F1420EE147D004F1D47 /* XSUserOverviewDataView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,13 @@
 		E4B0E1F620BFDF22006CE075 /* CALayer+LHRotationAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+LHRotationAnimation.m"; sourceTree = "<group>"; };
 		E4B0E1F820BFE0FD006CE075 /* WechatIMG6560.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG6560.jpeg; sourceTree = "<group>"; };
 		E4B0E1FA20BFE9C1006CE075 /* WechatIMG29.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG29.jpeg; sourceTree = "<group>"; };
+		E4FE8F1020EE147D004F1D47 /* XSUserCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSUserCircleProgress.h; sourceTree = "<group>"; };
+		E4FE8F1120EE147D004F1D47 /* UIView+GradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GradientLayer.m"; sourceTree = "<group>"; };
+		E4FE8F1220EE147D004F1D47 /* XSUserOverviewDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSUserOverviewDataView.m; sourceTree = "<group>"; };
+		E4FE8F1320EE147D004F1D47 /* XSUserCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSUserCircleProgress.m; sourceTree = "<group>"; };
+		E4FE8F1420EE147D004F1D47 /* XSUserOverviewDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XSUserOverviewDataView.xib; sourceTree = "<group>"; };
+		E4FE8F1520EE147D004F1D47 /* XSUserOverviewDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSUserOverviewDataView.h; sourceTree = "<group>"; };
+		E4FE8F1620EE147D004F1D47 /* UIView+GradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GradientLayer.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,7 @@
 		E4B0E1CE20BFDBC6006CE075 /* LHAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E4FE8F0F20EE147D004F1D47 /* 曲线进度 */,
 				E4B0E1E820BFDC40006CE075 /* Animations */,
 				E4B0E1CF20BFDBC6006CE075 /* AppDelegate.h */,
 				E4B0E1D020BFDBC6006CE075 /* AppDelegate.m */,
@@ -101,6 +113,21 @@
 				E4B0E1F620BFDF22006CE075 /* CALayer+LHRotationAnimation.m */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		E4FE8F0F20EE147D004F1D47 /* 曲线进度 */ = {
+			isa = PBXGroup;
+			children = (
+				E4FE8F1620EE147D004F1D47 /* UIView+GradientLayer.h */,
+				E4FE8F1120EE147D004F1D47 /* UIView+GradientLayer.m */,
+				E4FE8F1020EE147D004F1D47 /* XSUserCircleProgress.h */,
+				E4FE8F1320EE147D004F1D47 /* XSUserCircleProgress.m */,
+				E4FE8F1520EE147D004F1D47 /* XSUserOverviewDataView.h */,
+				E4FE8F1220EE147D004F1D47 /* XSUserOverviewDataView.m */,
+				E4FE8F1420EE147D004F1D47 /* XSUserOverviewDataView.xib */,
+			);
+			name = "曲线进度";
+			path = "Animations/曲线进度";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B0E1F920BFE0FD006CE075 /* WechatIMG6560.jpeg in Resources */,
+				E4FE8F1A20EE147D004F1D47 /* XSUserOverviewDataView.xib in Resources */,
 				E4B0E1DF20BFDBC8006CE075 /* LaunchScreen.storyboard in Resources */,
 				E4B0E1FB20BFE9C1006CE075 /* WechatIMG29.jpeg in Resources */,
 				E4B0E1DC20BFDBC8006CE075 /* Assets.xcassets in Resources */,
@@ -175,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FE8F1720EE147D004F1D47 /* UIView+GradientLayer.m in Sources */,
 				E4B0E1F720BFDF22006CE075 /* CALayer+LHRotationAnimation.m in Sources */,
 				E4B0E1D420BFDBC6006CE075 /* ViewController.m in Sources */,
+				E4FE8F1820EE147D004F1D47 /* XSUserOverviewDataView.m in Sources */,
+				E4FE8F1920EE147D004F1D47 /* XSUserCircleProgress.m in Sources */,
 				E4B0E1D120BFDBC6006CE075 /* AppDelegate.m in Sources */,
 				E4B0E1F120BFDC9A006CE075 /* CALayer+Heartbeat.m in Sources */,
 				E4B0E1F420BFDE50006CE075 /* CALayer+LHTransitionAnimation.m in Sources */,

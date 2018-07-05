@@ -10,7 +10,11 @@
 #import "CALayer+Heartbeat.h"
 #import "CALayer+LHRotationAnimation.h"
 #import "CALayer+LHTransitionAnimation.h"
+#import "XSUserOverviewDataView.h"
 @interface ViewController ()
+{
+    XSUserOverviewDataView *_dataView;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *heatImageView;
 
 @end
@@ -22,7 +26,32 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"呼吸";
     [self.heatImageView.layer beginBreathingAnimation];
+    
+    [self progressAnimation];
+}
 
+/** 曲线进度动画*/
+- (void)progressAnimation{
+    XSUserOverviewDataView *dataView = [[XSUserOverviewDataView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 50, self.heatImageView.frame.origin.y + self.heatImageView.frame.size.height + 70, 100, 100)];
+    
+    [self.view addSubview:dataView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dataView.progress = 1;
+    });
+    _dataView = dataView;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapDataView)];
+    dataView.userInteractionEnabled = YES;
+    [dataView addGestureRecognizer:tap];
+}
+
+- (void)tapDataView{
+    
+    if (_dataView.progress == 0) {
+        _dataView.progress = 1;
+    }else
+        _dataView.progress = 0;
+    
 }
 
 - (IBAction)selectedAnimatedType:(UISegmentedControl *)sender {
